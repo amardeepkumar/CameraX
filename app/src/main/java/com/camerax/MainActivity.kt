@@ -1,3 +1,4 @@
+/*
 package com.camerax
 
 import android.Manifest
@@ -155,10 +156,12 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         viewFinder.setTransform(matrix)
     }
 
-    /**
+    */
+/**
      * Process result from permission request dialog box, has the request
      * been granted? If yes, start Camera. Otherwise display a toast
-     */
+     *//*
+
     override fun onRequestPermissionsResult(
             requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
         if (requestCode == REQUEST_CODE_PERMISSIONS) {
@@ -173,9 +176,11 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         }
     }
 
-    /**
+    */
+/**
      * Check if all permission specified in the manifest have been granted
-     */
+     *//*
+
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(
                 baseContext, it) == PackageManager.PERMISSION_GRANTED
@@ -183,10 +188,12 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
     private class LuminosityAnalyzer : ImageAnalysis.Analyzer {
         private var lastAnalyzedTimestamp = 0L
 
-        /**
+        */
+/**
          * Helper extension function used to extract a byte array from an
          * image plane buffer
-         */
+         *//*
+
         private fun ByteBuffer.toByteArray(): ByteArray {
             rewind()    // Rewind the buffer to zero
             val data = ByteArray(remaining())
@@ -216,3 +223,4 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         }
     }
 }
+*/
