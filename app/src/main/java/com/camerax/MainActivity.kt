@@ -14,6 +14,8 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.camera.core.*
+import androidx.camera.core.impl.ImageAnalysisConfig
+import androidx.camera.core.impl.PreviewConfig
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
@@ -156,11 +158,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         viewFinder.setTransform(matrix)
     }
 
-    */
-/**
-     * Process result from permission request dialog box, has the request
-     * been granted? If yes, start Camera. Otherwise display a toast
-     *//*
 
     override fun onRequestPermissionsResult(
             requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
@@ -176,10 +173,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         }
     }
 
-    */
-/**
-     * Check if all permission specified in the manifest have been granted
-     *//*
 
     private fun allPermissionsGranted() = REQUIRED_PERMISSIONS.all {
         ContextCompat.checkSelfPermission(
@@ -188,11 +181,6 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
     private class LuminosityAnalyzer : ImageAnalysis.Analyzer {
         private var lastAnalyzedTimestamp = 0L
 
-        */
-/**
-         * Helper extension function used to extract a byte array from an
-         * image plane buffer
-         *//*
 
         private fun ByteBuffer.toByteArray(): ByteArray {
             rewind()    // Rewind the buffer to zero

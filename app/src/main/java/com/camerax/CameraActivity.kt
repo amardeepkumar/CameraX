@@ -105,7 +105,7 @@ class CameraActivity : AppCompatActivity(), LifecycleOwner {
             .build()
 
         var cameraSelector: CameraSelector = CameraSelector.Builder()
-            .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+            .requireLensFacing(CameraSelector.LENS_FACING_BACK)
             .build()
 
         cameraProvider.unbindAll()
